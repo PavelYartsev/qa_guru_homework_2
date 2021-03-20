@@ -43,9 +43,7 @@ public class FillFormTests {
         $(byText(gender)).click();
         $("#userNumber").setValue(phone);
         $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").click();
         $(".react-datepicker__year-select").selectOptionByValue(birthYear);
-        $(".react-datepicker__month-select").click();
         $(".react-datepicker__month-select").selectOptionContainingText(birthMonth);
         $(byText(birthDay)).click();
         $("#subjectsInput").setValue(shortSubject1);
