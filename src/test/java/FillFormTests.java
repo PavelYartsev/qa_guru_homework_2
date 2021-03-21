@@ -36,10 +36,11 @@ public class FillFormTests {
     @Test
     void fillRegistrationForm() {
         open(siteUrl);
-
+//TO DO Add opened page check
         $("#firstName").setValue(name);
         $("#lastName").setValue(surname);
         $("#userEmail").setValue(email);
+//Find parent and use it before byText expression
         $(byText(gender)).click();
         $("#userNumber").setValue(phone);
         $("#dateOfBirthInput").click();
@@ -57,7 +58,7 @@ public class FillFormTests {
         $("#react-select-3-input").setValue(state).pressEnter();
         $("#react-select-4-input").setValue(city).pressEnter();
         $("#submit").click();
-
+//TO DO Add opened page check
         //Assertions
         $(".table-responsive").shouldHave(text(name), text(surname), text(email), text(gender), text(phone), text(subject1),
                 text(subject2), text(hobby1), text(hobby2), text(fileName), text(address), text(state), text(city),
